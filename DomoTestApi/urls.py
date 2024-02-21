@@ -1,6 +1,6 @@
 from django.urls import path
 from DomoTestApi.serializers import CarSerializer
-from .views import CustomerList, CustomerDetails, BrandList, BrandDetails, CarList, CarDetails, DealershipList, DealershipDetails
+from .views import CustomerList, CustomerDetails, BrandList, BrandDetails, CarList, CarDetails, DealershipList, DealershipDetails, PurchaseList, PurchaseDetails
 
 urlpatterns = [
     path('customer/', CustomerList.as_view()),
@@ -11,4 +11,7 @@ urlpatterns = [
     path('car/<int:pk>/', CarDetails.as_view()),
     path('dealership/', DealershipList.as_view()),
     path('dealership/<int:pk>/', DealershipDetails.as_view()),
+    path('purchase/', PurchaseList.as_view()),
+    path('purchase/<int:pk>/', PurchaseDetails.as_view()),
+
 ]
